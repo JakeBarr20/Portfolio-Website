@@ -2,7 +2,7 @@
 @import "./colours.scss";
 
 .wrapper{
-    background-color: $black-accent;
+    background-color: $black;
     font-family: 'Courier New', Courier, monospace;
     color: $white;
 
@@ -10,6 +10,7 @@
         display: flex;
         justify-content: space-between;
         padding: 20px 60px 20px 60px;
+        background-color: $black-accent;
 
         .nav-right {
             display: flex;
@@ -24,6 +25,38 @@
                     text-decoration: underline;
                 }
             }
+        }
+    }
+
+    .scroller{
+        display: flex;
+        flex-direction: column;
+
+        .point {
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: $primary-red;
+            position: relative;
+
+            
+            &::before {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color: $blue;
+            }
+        }
+
+        hr{
+            height: 40px;
+            width: 0;
+            margin-left: 9px;
+            color: $white;
         }
     }
 }
