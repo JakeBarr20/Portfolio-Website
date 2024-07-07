@@ -1,4 +1,29 @@
+@import "./breakpoints.scss";
+@import "./colours.scss";
+
 .wrapper{
-    width: 100%;
-    background-color: red;
+    background-color: $black-accent;
+    font-family: 'Courier New', Courier, monospace;
+    color: $white;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 60px 20px 60px;
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+
+            p {
+                margin-right: 30px;
+
+                &:hover{
+                    color: $primary-red;
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }
