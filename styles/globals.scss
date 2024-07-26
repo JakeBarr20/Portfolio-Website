@@ -68,20 +68,46 @@
         .about-left {
            width: 530px;;
 
-           .name {
-            display: flex;
-            .red-square{
-                width: 7px;
-                height: 32px;
-                background-color: $primary-red;
+            .info-wrapper {
+                opacity: 0;
+                animation: fadeInUp 2s forwards;
+                animation-delay: 5s;
+            }
+
+            h1 {
+              overflow: hidden; 
+              text-decoration: underline;
+              text-decoration-color: $primary-red;
+              border-right: .15em solid $primary-red; 
+              white-space: nowrap; 
+              margin: 0 auto;
+              letter-spacing: .15em; 
+              margin-bottom: 40px;
+              animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
               }
-   
-              h1 {
-                text-decoration: underline;
-                text-decoration-color: $primary-red;
-                margin-bottom: 40px;
-              }  
-           }
+
+              @keyframes fadeInUp {
+                from { 
+                    transform: translate3d(0,40px,0);
+                }
+                to { 
+                    transform: translate3d(0,0,0); 
+                    opacity: 1;
+                }
+              }
+              
+              @keyframes typing {
+                from { width: 0 }
+                to { width: 100% }
+              }
+              
+              @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color: $primary-red; }
+              }
+           
 
            .bio {
              margin-bottom: 40px;
