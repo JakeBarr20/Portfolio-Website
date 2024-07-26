@@ -59,4 +59,47 @@
             color: $white;
         }
     }
+
+    .about-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 100px;
+
+        .about-left {
+           width: 530px;;
+
+           .name {
+            display: flex;
+            .red-square{
+                width: 7px;
+                height: 32px;
+                background-color: $primary-red;
+              }
+   
+              h1 {
+                text-decoration: underline;
+                text-decoration-color: $primary-red;
+                margin-bottom: 40px;
+              }  
+           }
+
+           .bio {
+             margin-bottom: 40px;
+           }
+
+           .bio-red {
+             color: $primary-red;
+           }
+
+           .about-info{
+             display: flex;
+             justify-content: space-between;
+             margin-bottom: 10px;
+
+             .info-header{
+               font-weight: bold; 
+             }
+           }
+        }
+    }
 }
