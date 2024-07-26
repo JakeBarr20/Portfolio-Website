@@ -1,4 +1,6 @@
 import Scroller from "./Scroller";
+import Image from "next/image";
+import Me from "../app/portfolio-img.png"
 
 const About: React.FC = () => {
     return (
@@ -24,6 +26,10 @@ const About: React.FC = () => {
                         <p>07422549302</p>
                     </div>
                 </div>
+            </div>
+            <div className="about-right">
+                <div className="blur"></div>
+                <Image priority src={Me} alt="me"></Image>
             </div>
             <Scroller></Scroller>
         </div>

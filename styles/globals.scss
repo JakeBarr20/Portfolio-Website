@@ -127,5 +127,25 @@
              }
            }
         }
+
+        .about-right {
+            position: relative;
+            .blur {
+                width: 280px;
+                height: 280px;
+                background-color: $primary-red;
+                border-radius: 50%;
+                filter: blur(50px)
+            }
+
+            img {
+                position: absolute;
+                top: -60px;
+                left: 20px;
+                opacity: 0;
+                animation: fadeInUp 2s forwards;
+                animation-delay: 5s;
+            } 
+        }
     }
 }
